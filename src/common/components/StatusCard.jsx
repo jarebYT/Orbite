@@ -41,12 +41,13 @@ const useStyles = makeStyles()((theme, { desktopPadding }) => ({
   card: {
     pointerEvents: 'auto',
     width: theme.dimensions.popupMaxWidth,
+    borderRadius: 14,
   },
   header: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: theme.spacing(1, 1, 0, 2),
+    padding: theme.spacing(1, 1, 1, 2),
     color: theme.palette.text.secondary,
   },
   media: {
@@ -187,7 +188,7 @@ const StatusCard = ({ deviceId, position, onClose, disableActions, desktopPaddin
                 image={deviceImage && `/api/media/${device.uniqueId}/${deviceImage}`}
               >
                 <div className={classes.header}>
-                  <Typography variant="body2" color="inherit">
+                  <Typography variant="subtitle2" color="inherit" noWrap>
                     {device.name}
                   </Typography>
                   <IconButton size="small" color="inherit" onClick={onClose} onTouchStart={onClose}>

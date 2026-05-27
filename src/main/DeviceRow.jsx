@@ -38,10 +38,26 @@ import MotionBar from './components/MotionBar';
 dayjs.extend(relativeTime);
 
 const useStyles = makeStyles()((theme) => ({
+  avatar: {
+    width: 42,
+    height: 42,
+    borderRadius: 12,
+    backgroundColor:
+      theme.palette.mode === 'dark' ? theme.palette.grey[700] : theme.palette.grey[500],
+  },
   icon: {
-    width: '25px',
-    height: '25px',
+    width: '24px',
+    height: '24px',
     filter: 'brightness(0) invert(1)',
+  },
+  statusDot: {
+    display: 'inline-block',
+    width: 8,
+    height: 8,
+    borderRadius: '50%',
+    backgroundColor: 'currentColor',
+    marginRight: theme.spacing(0.75),
+    verticalAlign: 'middle',
   },
   batteryText: {
     fontSize: '0.75rem',
@@ -59,9 +75,6 @@ const useStyles = makeStyles()((theme) => ({
   },
   neutral: {
     color: theme.palette.neutral.main,
-  },
-  selected: {
-    backgroundColor: theme.palette.action.selected,
   },
 }));
 
@@ -112,7 +125,10 @@ const DeviceRow = ({ devices, index, style }) => {
             {' • '}
           </>
         )}
-        <span className={classes[getStatusColor(item.status)]}>{status}</span>
+        <span className={classes[getStatusColor(item.status)]}>
+          <span className={classes.statusDot} />
+          {status}
+        </span>
       </>
     );
   };
@@ -124,10 +140,9 @@ const DeviceRow = ({ devices, index, style }) => {
         onClick={() => dispatch(devicesActions.selectId(item.id))}
         disabled={!admin && item.disabled}
         selected={selectedDeviceId === item.id}
-        className={selectedDeviceId === item.id ? classes.selected : null}
       >
         <ListItemAvatar>
-          <Avatar>
+          <Avatar className={classes.avatar} variant="rounded">
             <img className={classes.icon} src={mapIcons[mapIconKey(item.category)]} alt="" />
           </Avatar>
         </ListItemAvatar>

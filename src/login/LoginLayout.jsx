@@ -12,7 +12,7 @@ const useStyles = makeStyles()((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    background: theme.palette.primary.main,
+    background: 'linear-gradient(160deg, #243042 0%, #0f172a 100%)',
     paddingBottom: theme.spacing(5),
     width: theme.dimensions.sidebarWidth,
     [theme.breakpoints.down('lg')]: {
@@ -28,15 +28,25 @@ const useStyles = makeStyles()((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    boxShadow: '-2px 0px 16px rgba(0, 0, 0, 0.25)',
-    [theme.breakpoints.up('lg')]: {
-      padding: theme.spacing(0, 25, 0, 0),
-    },
+    backgroundColor: theme.palette.background.default,
   },
   form: {
-    maxWidth: theme.spacing(52),
-    padding: theme.spacing(5),
+    maxWidth: theme.spacing(48),
+    padding: theme.spacing(6, 5),
     width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: theme.spacing(1),
+    backgroundColor: theme.palette.background.paper,
+    borderRadius: theme.spacing(2),
+    border: `1px solid ${theme.palette.divider}`,
+    boxShadow: theme.shadows[4],
+    [theme.breakpoints.down('sm')]: {
+      border: 'none',
+      boxShadow: 'none',
+      backgroundColor: 'transparent',
+      padding: theme.spacing(4, 3),
+    },
   },
 }));
 
@@ -51,7 +61,7 @@ const LoginLayout = ({ children }) => {
           <LogoImage color={theme.palette.secondary.contrastText} />
         )}
       </div>
-      <Paper className={classes.paper}>
+      <Paper elevation={0} square className={classes.paper}>
         <form className={classes.form}>{children}</form>
       </Paper>
     </main>
