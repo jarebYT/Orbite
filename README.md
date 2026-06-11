@@ -1,15 +1,67 @@
-# [Traccar Web Interface](https://www.traccar.org)
+<p align="center">
+  <img src="public/logo.svg" alt="Orbite Logo" width="400"/>
+</p>
 
-## Overview
+**Orbite** is my fork of the **Traccar** web interface.
+It keeps the Traccar foundation while introducing a refreshed visual identity and a few quality-of-life improvements.
 
-Traccar is open source server for various GPS tracking devices. This repository contains web interface for the Traccar platform. For back-end checkout [main Traccar repository](https://github.com/tananaev/traccar).
+## Table of Contents
 
-The app uses React, Material UI and MapLibre. For more information on how to build it please check the [web app documentation](https://www.traccar.org/build-web-app/).
+* [Technologies Used](#technologies-used)
+* [Features](#features)
+* [Installation](#installation)
+* [Contributors](#contributors)
+* [Acknowledgments](#acknowledgments)
+* [Traccar Notice](#traccar-notice)
 
-## Team
+## Technologies Used
 
-- Anton Tananaev ([anton@traccar.org](mailto:anton@traccar.org))
-- Andrey Kunitsyn ([andrey@traccar.org](mailto:andrey@traccar.org))
+* **React**
+* **Material UI**
+* **MapLibre**
+* **Vite**
+
+## Features
+
+* Refreshed **visual style**
+* New **icons** across the interface
+* Built-in **fullscreen button** for a better map experience
+* Real-time **GPS tracking** interface powered by Traccar
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <your-orbite-repository-url>
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run start
+   ```
+
+4. Open the app in your browser.
+
+## Contributors
+
+* Traccar project authors and maintainer(s)
+* Orbite maintainer(s)
+
+## Traccar Notice
+
+Orbite is based on the Traccar web interface. Keep the following obligations in mind when redistributing or modifying this fork:
+
+* preserve attribution to the original Traccar project,
+* keep a link to the upstream repository: https://github.com/tananaev/traccar,
+* retain the Apache License 2.0 notice and related copyright headers.
 
 ## License
 
