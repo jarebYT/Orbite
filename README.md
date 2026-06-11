@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="public/logo.svg" alt="Orbite Logo" width="400"/>
+  <img src="public/logo.png" alt="Orbite Logo" width="400"/>
 </p>
 
 **Orbite** is my fork of the **Traccar** web interface.
