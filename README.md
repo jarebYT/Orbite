@@ -25,7 +25,7 @@ It keeps the Traccar foundation while introducing a refreshed visual identity an
 
 * Refreshed **visual style**
 * New **icons** across the interface
-* Built-in **fullscreen button** for a better map experience
+* Built-in **new modules and parameters** for a better map experience
 * Real-time **GPS tracking** interface powered by Traccar
 
 ## Installation
@@ -33,7 +33,7 @@ It keeps the Traccar foundation while introducing a refreshed visual identity an
 1. Clone the repository:
 
    ```bash
-   git clone <your-orbite-repository-url>
+   git clone https://github.com/jarebYT/Orbite.git
    ```
 
 2. Install dependencies:
